@@ -9,7 +9,7 @@ function Header() {
     </h1>
     <form className='bg-slate-100 p-2 rounded-lg flex items-center'>
         <input type="text" placeholder='Search....' className='bg-transparent focus:outline-none w-24 sm:w-64'/>
-        <FaSearch className='text-slate-300'/>
+        <FaSearch className='text-slate-300 cursor-pointer'/>
     </form>
     <ul className='flex gap-4 items-center cursor-pointer'>
         <li className='hidden sm:inline text-slate-600 hover:underline'>Home</li>
