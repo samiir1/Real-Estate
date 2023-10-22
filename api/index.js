@@ -1,5 +1,6 @@
 import express from 'express'
 import mongoose from 'mongoose'
+import userRouter from './routes/user.route.js'
 import dotenv from 'dotenv'
 import { error } from 'console'
 dotenv.config()
@@ -11,8 +12,13 @@ mongoose.connect(process.env.MONGO).then(()=>{
 
 const app = express();
 
-app.listen(300, ()=>{
-    console.log('Server Running Port 300')
+app.listen(3000, ()=>{
+    console.log('Server Running Port 3000')
 })
+
+
+app.use('/api/user', userRouter)
+
+
 
 export default app;
